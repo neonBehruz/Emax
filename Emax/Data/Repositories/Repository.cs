@@ -32,7 +32,7 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : Auditabl
         return entity;
     }
 
-    public async Task<bool> RemoveAsync(long id)
+    public async Task<bool> RemoveAsync(Guid id)
     {
         var entity = await dbSet.FirstOrDefaultAsync(e => e.Id == id);
         if(entity == null) return false;
@@ -41,12 +41,12 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : Auditabl
         return true;
     }
 
-    public IQueryable<TEntity> SelectAll()
+    public IQueryable<TEntity> RetrieveAll()
     {
         return dbSet;
     }
 
-    public async Task<TEntity> SelectByIdAsync(long id)
+    public async Task<TEntity> SelectByIdAsync(Guid id)
     {
         return await dbSet.FirstOrDefaultAsync(e => e.Id == id);
     }

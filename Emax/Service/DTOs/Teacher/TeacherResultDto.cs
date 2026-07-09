@@ -4,7 +4,7 @@ namespace Emax.Service.DTOs.Teacher;
 
 public class TeacherResultDto
 {
-    public long Id { get; set; }
+    public Guid Id { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string Email { get; set; }

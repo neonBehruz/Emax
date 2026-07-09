@@ -10,7 +10,6 @@ public class HelloWorld
         IRepository<Teacher> teacherRepository = new Repository<Teacher>();
         teacherRepository.InsertAsync(new Teacher
         {
-            Id = 1,
             FirstName = "John",
             LastName = "Doe",
             Email = "john.doe@example.com",
@@ -23,11 +22,9 @@ public class HelloWorld
         IRepository<Group> groupRepository = new Repository<Group>();
         groupRepository.InsertAsync(new Group
         {
-            Id = 1,
             Name = "Math 101",
             Description = "Basic Mathematics",
             Room = 101,
-            TeacherId = 1,
             Created = DateTime.UtcNow,
             Updated = DateTime.UtcNow
         });

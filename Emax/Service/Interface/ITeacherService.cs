@@ -7,7 +7,7 @@ public interface ITeacherService
 {
     Task<TeacherResultDto> CreateAsync(TeacherCreationDto dto);
     Task<TeacherResultDto> UpdateAsync(TeacherUpdateDto dto);
-    Task<bool> DeleteAsync(long id);
-    Task<TeacherResultDto> GetByIdAsync(long id);
+    Task<bool> DeleteAsync(Guid id);
+    Task<TeacherResultDto> GetByIdAsync(Guid id);
     Task<IEnumerable<TeacherResultDto>> GetAllAsync();
 }

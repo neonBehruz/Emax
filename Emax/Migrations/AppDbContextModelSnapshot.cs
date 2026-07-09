@@ -24,16 +24,11 @@ namespace Emax.Migrations
 
             modelBuilder.Entity("Emax.Domain.Entities.Group", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+                        .HasColumnType("uuid");
 
                     b.Property<DateTime>("Created")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Description")
@@ -47,13 +42,10 @@ namespace Emax.Migrations
                     b.Property<int>("Room")
                         .HasColumnType("integer");
 
-                    b.Property<long?>("TeacherId")
-                        .HasColumnType("bigint");
+                    b.Property<Guid?>("TeacherId")
+                        .HasColumnType("uuid");
 
                     b.Property<DateTime>("Updated")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
@@ -65,11 +57,9 @@ namespace Emax.Migrations
 
             modelBuilder.Entity("Emax.Domain.Entities.Student", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+                        .HasColumnType("uuid");
 
                     b.Property<DateTime>("Created")
                         .HasColumnType("timestamp with time zone");
@@ -106,20 +96,18 @@ namespace Emax.Migrations
 
             modelBuilder.Entity("Emax.Domain.Entities.StudentGroup", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+                        .HasColumnType("uuid");
 
                     b.Property<DateTime>("Created")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<long>("GroupId")
-                        .HasColumnType("bigint");
+                    b.Property<Guid>("GroupId")
+                        .HasColumnType("uuid");
 
-                    b.Property<long>("StudentId")
-                        .HasColumnType("bigint");
+                    b.Property<Guid>("StudentId")
+                        .HasColumnType("uuid");
 
                     b.Property<DateTime>("Updated")
                         .HasColumnType("timestamp with time zone");
@@ -135,16 +123,11 @@ namespace Emax.Migrations
 
             modelBuilder.Entity("Emax.Domain.Entities.Teacher", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+                        .HasColumnType("uuid");
 
                     b.Property<DateTime>("Created")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Email")
@@ -164,9 +147,6 @@ namespace Emax.Migrations
                         .HasColumnType("text");
 
                     b.Property<DateTime>("Updated")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");

@@ -9,4 +9,5 @@ public class Teacher : Auditable
     public string Email { get; set; }
     public string Password { get; set; }
     public IEnumerable<Group> Groups { get; set; }
+    public DateTime CreatedAt { get; internal set; }
 }

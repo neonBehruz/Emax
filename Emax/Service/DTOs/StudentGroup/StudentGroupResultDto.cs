@@ -6,7 +6,7 @@ namespace Emax.Service.DTOs.StudentGroup;
 
 public class StudentGroupResultDto
 {
-    public long Id { get; set; }
+    public Guid Id { get; set; }
     public GroupResultDto Group { get; set; }
     public StudentResultDto Student { get; set; }
 }

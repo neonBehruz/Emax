@@ -7,7 +7,7 @@ public interface IStudentGroupService
 {
     Task<StudentGroupResultDto> CreateAsync(StudentGroupCreationDto dto);
     Task<StudentGroupResultDto> UpdateAsync(StudentGroupUpdateDto dto);
-    Task<bool> DeleteAsync(long id);
-    Task<StudentGroupResultDto> GetByIdAsync(long id);
+    Task<bool> DeleteAsync(Guid id);
+    Task<StudentGroupResultDto> GetByIdAsync(Guid id);
     Task<IEnumerable<StudentGroupResultDto>> GetAllAsync();
 }

@@ -2,8 +2,8 @@
 
 public class StudentGroupUpdateDto
 {
-    public long Id { get; set; }
-    public long GroupId { get; set; }
-    public long StudentId { get; set; }
+    public Guid Id { get; set; }
+    public Guid GroupId { get; set; }
+    public Guid StudentId { get; set; }
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 }
